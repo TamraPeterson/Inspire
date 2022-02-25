@@ -8,6 +8,9 @@ class AppState extends EventEmitter {
   hour = null
   minutes = null
   ampm = ''
+
+  /** @type {import('./Models/Todo').Todo[]} */
+  todos = []
 }
 
 export const ProxyState = new Proxy(new AppState(), {

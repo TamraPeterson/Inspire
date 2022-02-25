@@ -1,12 +1,16 @@
 import { ProxyState } from "../AppState.js"
 
 
-function _drawTime() {
 
+function _drawTime() {
   document.getElementById('hour').innerText = ProxyState.hour
   document.getElementById('minutes').innerText = ProxyState.minutes
   document.getElementById('ampm').innerText = ProxyState.ampm
-
+  if (ProxyState.ampm == 'am') {
+    document.getElementById('greeting').innerText = 'Morning'
+  } else {
+    document.getElementById('greeting').innerText = 'Evening'
+  }
 
 }
 
@@ -22,6 +26,10 @@ function _getTime() {
     ampm = 'am'
   }
   let minutes = d.getMinutes()
+  if (minutes < 10) {
+    // @ts-ignore
+    minutes = '0' + minutes
+  }
   console.log(hours, minutes)
   ProxyState.hour = hours
   ProxyState.minutes = minutes

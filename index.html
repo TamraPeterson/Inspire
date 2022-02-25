@@ -8,6 +8,7 @@
   <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
   <title>Inspire</title>
@@ -53,22 +54,47 @@
 
     <div class=" row text-center main align-items-center">
 
-      <div class=" col-3" id="tasks">
-        Tasks Lists
-      </div>
+      <div class="col-4 d-flex justify-content-center" id="tasks">
 
-      <div class="col-6" id="clock">
-        <div class="jumbotron jumbotron-fluid">
-          <div class="container" id="clock">
-            <p>Date</p>
-            <h1 class="display-4"><span id="hour">Hour</span>:<span id="minutes">Minutes</span> <span id="ampm"></span>
-            </h1>
-          </div>
+        <div class="card text-dark p-2 m-3 opacity-75" style="width: 18rem;">
+          <h3 class="text-center ">To Do:</h3>
+          <ul class="list-group list-group-flush" id="todos">
+            <!-- <li class="d-flex justify-content-between p-3">
+              <input type="checkbox" name="check" class="strikethrough mt-1" id="check" onclick="">
+              <span></span>
+              Tasks
+              <i class="mdi mdi-delete selectable" title="Delete"
+                onclick="app.todosController.deleteTodo('${this.id}')">
+              </i>
+            </li> -->
+          </ul>
+          <form class="p-3" onsubmit="app.todosController.addTodo('${this.id}')">
+            <div class="input-group mb-3">
+              <input required type="text" minlength="3" maxlength="50" name="name" id="name" class="form-control"
+                placeholder="Add Task" aria-label="Add Task" aria-describedby="button-addon2">
+              <button class="btn btn-outline-secondary">Add</button>
+            </div>
+          </form>
         </div>
+
+        <!-- app.tasksController.completeTask(this, '${this.id}')"
+        ${this.isComplete ? 'checked' : '' } -->
+
       </div>
 
-      <div class="col-3">
-        Empty
+      <div class="col-4" id="clock">
+
+        <div class="container" id="clock">
+          <h1 class="display-4" style="font-size: 100px;"><span id="hour">Hour</span>:<span id="minutes">Minutes</span>
+            <span id="ampm"></span>
+          </h1>
+          <h2 class="pt-3">Good <span id="greeting">Morning</span>!</h2>
+        </div>
+
+      </div>
+
+      <div class="col-4">
+        <!-- Empty -->
       </div>
 
     </div>
@@ -82,7 +108,7 @@
     <div class="row text-center">
 
       <div class="col-2">
-        change image?
+        <!-- change image? -->
       </div>
 
       <div class="col-8">
@@ -90,7 +116,7 @@
       </div>
 
       <div class="col-2">
-        something else
+        <!-- something else -->
       </div>
 
     </div>

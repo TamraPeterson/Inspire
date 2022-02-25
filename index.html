@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/style/main.css">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <title>Inspire</title>
+
+</head>
+<style>
+  body.debug .container,
+  body.debug .container-fluid {
+    outline: 2px double blue;
+    outline-offset: -2px;
+  }
+
+  body.debug .row {
+    outline: 2px dashed red;
+    outline-offset: -2px;
+  }
+
+  body.debug [class*="col-"] {
+    outline: 2px dotted forestgreen;
+    outline-offset: -3px;
+  }
+</style>
+
+<body class="text-white ">
+
+  <header>
+    <div class="container-fluid">
+      <div class="row justify-content-end">
+        <div class="col-1 pt-3" id="weather">
+          Weather
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main class="container-fluid main">
+
+
+    <!-- <div class="bg-image" style="background-image: url('')">
+      </div> -->
+
+
+    <div class=" row text-center main align-items-center">
+
+      <div class=" col-3" id="tasks">
+        Tasks Lists
+      </div>
+
+      <div class="col-6" id="clock">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container" id="clock">
+            <p>Date</p>
+            <h1 class="display-4"><span id="hour">Hour</span>:<span id="minutes">Minutes</span> <span id="ampm"></span>
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-3">
+        Empty
+      </div>
+
+    </div>
+
+
+  </main>
+
+
+  <footer class="container-fluid">
+
+    <div class="row text-center">
+
+      <div class="col-2">
+        change image?
+      </div>
+
+      <div class="col-8">
+        Quote
+      </div>
+
+      <div class="col-2">
+        something else
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.23.0/axios.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.3.10/dist/sweetalert2.all.min.js"
+    integrity="sha256-hw7v8jZF/rFEdx1ZHepT4D73AFTHLu/P9kEyrNesRyc=" crossorigin="anonymous"></script>
+  <script src="app/main.js" type="module"></script>
+</body>
+
+</html>

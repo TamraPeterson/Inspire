@@ -5,7 +5,7 @@ export const imagesApi = axios.create({
 })
 
 // @ts-ignore
-export const tasksApi = axios.create({
+export const todosApi = axios.create({
   baseURL: 'https://bcw-sandbox.herokuapp.com/api/tamra/todos',
   timeout: 5000
 })

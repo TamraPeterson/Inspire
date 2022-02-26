@@ -57,7 +57,7 @@
       <div class="col-4 d-flex justify-content-center" id="tasks">
 
         <div class="card text-dark p-2 m-3 opacity-75" style="width: 18rem;">
-          <h3 class="text-center ">To Do:</h3>
+          <h4 class="text-center ">Today's Tasks:</h4>
           <ul class="list-group list-group-flush" id="todos">
             <!-- <li class="d-flex justify-content-between p-3">
               <input type="checkbox" name="check" class="strikethrough mt-1" id="check" onclick="">
@@ -68,17 +68,14 @@
               </i>
             </li> -->
           </ul>
-          <form class="p-3" onsubmit="app.todosController.addTodo('${this.id}')">
+          <form class="p-3 " onsubmit="app.todosController.addTodo()">
             <div class="input-group mb-3">
-              <input required type="text" minlength="3" maxlength="50" name="name" id="name" class="form-control"
-                placeholder="Add Task" aria-label="Add Task" aria-describedby="button-addon2">
+              <input required type="text" minlength="3" maxlength="50" name="description" id="description"
+                class="form-control" placeholder="Add Task" aria-label="Add Task" aria-describedby="button-addon2">
               <button class="btn btn-outline-secondary">Add</button>
             </div>
           </form>
         </div>
-
-        <!-- app.tasksController.completeTask(this, '${this.id}')"
-        ${this.isComplete ? 'checked' : '' } -->
 
       </div>
 

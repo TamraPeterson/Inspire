@@ -1,6 +1,7 @@
 /* BASIC STYLES HERE */
 .main{
   min-height: 80vh;
+  max-height: 80vh;
 }
 
 header{
@@ -16,5 +17,9 @@ body{
 }
 
 .card{
-  transform: translateY(-90%);
+  transform: translateY(-0%);
+}
+
+.strikethrough:checked + span {
+  text-decoration: line-through;
 }

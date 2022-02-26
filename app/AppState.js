@@ -1,5 +1,6 @@
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
+import { Todo } from "./Models/Todo.js"
 
 class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
@@ -10,7 +11,9 @@ class AppState extends EventEmitter {
   ampm = ''
 
   /** @type {import('./Models/Todo').Todo[]} */
+
   todos = []
+  newTodo = {}
 }
 
 export const ProxyState = new Proxy(new AppState(), {

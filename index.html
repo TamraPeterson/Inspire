@@ -36,18 +36,17 @@
 
   <header>
     <div class="container-fluid">
-      <div class="row justify-content-end text-end">
-        <div class="col-2 p-5" id="weather">
-          Weather
-
-          <label class="switch">
+      <div class="row justify-content-end text-center">
+        <div class="col-2">
+          <h1 class=" p-5 temperature">
+            <h1 class="selectable" id="weather" onclick="app.weatherController.toggleWeather()"></h1>
+            <!-- <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>
-          </label>
-
+          </label> -->
+          </h1>
         </div>
       </div>
-    </div>
     </div>
   </header>
 
@@ -110,13 +109,11 @@
 
   <footer class="container-fluid">
 
-    <div class="row text-center">
+    <div class="row text-center justify-content-center">
 
-      <div class="col-2">
-        <!-- change image? -->
-      </div>
+      <div class="col-1"></div>
 
-      <div class="col-12  quoteCol">
+      <div class="col-10 text-center quoteCol">
         <div id="quote">
           Quote
         </div>
@@ -126,9 +123,7 @@
         <!-- <h5 class="quote" id="quote">Quote</h5> -->
       </div>
 
-      <div class="col-2">
-        <!-- something else -->
-      </div>
+      <div class="col 1"></div>
 
     </div>
   </footer>

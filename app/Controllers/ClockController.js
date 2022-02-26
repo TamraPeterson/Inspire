@@ -21,7 +21,10 @@ function _getTime() {
   if (hours > 12) {
     hours -= 12
     ampm = 'pm'
-  } else if (hours === 0) {
+  } else if (hours === 12) {
+    ampm = 'pm'
+  }
+  else if (hours === 0) {
     hours = 12
     ampm = 'am'
   } else {

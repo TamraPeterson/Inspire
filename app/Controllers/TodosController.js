@@ -18,6 +18,10 @@ function _addTodo() {
 
 }
 
+function _completeTodo() {
+
+}
+
 export class TodosController {
   constructor() {
 

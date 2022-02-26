@@ -15,7 +15,7 @@ export class Todo {
               <span></span>
               Tasks
               <i class="mdi mdi-delete selectable" title="Delete"
-                onclick="app.tasksController.completeTask(this, '${this.id}')"
+                onclick="app.todosController.completeTodo(this, '${this.id}')"
                 ${this.completed ? 'checked' : ''})">
               </i>
             </li>

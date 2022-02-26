@@ -38,8 +38,8 @@
     <div class="container-fluid">
       <div class="row justify-content-end text-center">
         <div class="col-2">
-          <h1 class=" p-5 temperature">
-            <h1 class="selectable" id="weather" onclick="app.weatherController.toggleWeather()"></h1>
+
+          <h1 class="selectable p-5 temp" id="temp" onclick="app.weatherController.toggleWeather()">
             <!-- <label class="switch">
             <input type="checkbox">
             <span class="slider round"></span>
@@ -89,7 +89,8 @@
       <div class="col-4 clock" id="clock">
 
         <div class="container" id="clock">
-          <h1 class="display-4" style="font-size: 100px;"><span id="hour">Hour</span>:<span id="minutes">Minutes</span>
+          <h1 class="display-4" style="font-size: 100px; font-weight:500"><span id="hour">Hour</span>:<span
+              id="minutes">Minutes</span>
             <span id="ampm"></span>
           </h1>
           <h2 class="pt-3">Good <span id="greeting">Morning</span>!</h2>

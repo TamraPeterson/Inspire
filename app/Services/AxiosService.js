@@ -10,7 +10,14 @@ export const todosApi = axios.create({
   timeout: 5000
 })
 
-// export const clockApi = axios.create({
-//   baseURL: '',
-//   timeout: 5000
-// })
+// @ts-ignore
+export const quotesApi = axios.create({
+  baseURL: 'https://bcw-sandbox.herokuapp.com/api/quotes',
+  timeout: 5000
+})
+
+// @ts-ignore
+export const weathersApi = axios.create({
+  baseURL: 'https://bcw-sandbox.herokuapp.com/api/weather',
+  timeout: 5000
+})

@@ -6,10 +6,14 @@
 
 header{
   min-height: 10vh;
+  max-height: 10vh;
+
 }
 
 footer{
   min-height: 10vh;
+  max-height: 10vh;
+
 }
 
 body{
@@ -22,4 +26,25 @@ body{
 
 .strikethrough:checked + span {
   text-decoration: line-through;
+}
+
+.clock{
+  text-shadow: rgb(43, 42, 42) 0px 0px 10px;
+}
+
+footer .quote{
+  text-shadow: rgb(43, 42, 42) 0px 0px 10px;
+}
+
+
+footer .author{
+opacity: 0;
+transition: 0.5s;
+}
+
+footer:hover .author{
+  transition: 0.5s;
+  opacity: 100%;
+  text-shadow: rgb(43, 42, 42) 0px 0px 10px;
+
 }

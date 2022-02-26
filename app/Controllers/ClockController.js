@@ -24,13 +24,14 @@ function _getTime() {
   } else if (hours === 0) {
     hours = 12
     ampm = 'am'
+  } else {
+    ampm = 'am'
   }
   let minutes = d.getMinutes()
   if (minutes < 10) {
     // @ts-ignore
     minutes = '0' + minutes
   }
-  console.log(hours, minutes)
   ProxyState.hour = hours
   ProxyState.minutes = minutes
   ProxyState.ampm = ampm

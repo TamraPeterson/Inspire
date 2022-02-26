@@ -1,3 +1,4 @@
+import { ProxyState } from "../AppState.js"
 import { generateId } from "../Utils/generateId.js"
 
 export class Todo {
@@ -21,4 +22,6 @@ export class Todo {
             </li>
     `
   }
+
+
 }

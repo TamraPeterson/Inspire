@@ -25,11 +25,23 @@ function _drawTodos() {
   document.getElementById('todos').innerHTML = template
 }
 
+function _todosCount() {
+  let totalTodos = ProxyState.todos.length
+  // @ts-ignore
+  document.getElementById('total').innerText = totalTodos
+  let completedTodos = ProxyState.todos.filter(t => t.completed == true)
+  // @ts-ignore
+  document.getElementById('completed').innerText = completedTodos.length
+
+}
+
 
 export class TodosController {
   constructor() {
     _getTodos()
+    _todosCount()
     ProxyState.on('todos', _drawTodos)
+    ProxyState.on('todos', _todosCount)
   }
 
   addTodo() {
@@ -54,10 +66,14 @@ export class TodosController {
     // }
     todo.completed = !todo.completed
     todosApi.put(id, todo)
+    _todosCount()
   }
   async deleteTodo(id) {
-    const res = await todosApi.delete(id)
-    ProxyState.todos = ProxyState.todos.filter(t => t.id != id)
-    console.log(ProxyState.todos)
+    if (await Pop.confirm()) {
+      const res = await todosApi.delete(id)
+      ProxyState.todos = ProxyState.todos.filter(t => t.id != id)
+      console.log(ProxyState.todos)
+    }
+
   }
 }

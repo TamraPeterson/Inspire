@@ -14,6 +14,12 @@ class AppState extends EventEmitter {
 
   todos = []
   newTodo = {}
+
+  quote = {}
+  weather = {}
+  currentTemp = null
+  celsius = null
+  farenheight = null
 }
 
 export const ProxyState = new Proxy(new AppState(), {

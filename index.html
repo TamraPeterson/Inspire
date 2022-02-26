@@ -32,15 +32,22 @@
   }
 </style>
 
-<body class="text-white ">
+<body class="text-white">
 
   <header>
     <div class="container-fluid">
-      <div class="row justify-content-end">
-        <div class="col-1 pt-3" id="weather">
+      <div class="row justify-content-end text-end">
+        <div class="col-2 p-5" id="weather">
           Weather
+
+          <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+
         </div>
       </div>
+    </div>
     </div>
   </header>
 
@@ -58,6 +65,7 @@
 
         <div class="card text-dark p-2 m-3 opacity-75" style="width: 18rem;">
           <h4 class="text-center ">Today's Tasks:</h4>
+          <h6><span id="completed">0 </span>/ <span id="total">7</span></h6>
           <ul class="list-group list-group-flush" id="todos">
             <!-- <li class="d-flex justify-content-between p-3">
               <input type="checkbox" name="check" class="strikethrough mt-1" id="check" onclick="">
@@ -79,7 +87,7 @@
 
       </div>
 
-      <div class="col-4" id="clock">
+      <div class="col-4 clock" id="clock">
 
         <div class="container" id="clock">
           <h1 class="display-4" style="font-size: 100px;"><span id="hour">Hour</span>:<span id="minutes">Minutes</span>
@@ -108,8 +116,14 @@
         <!-- change image? -->
       </div>
 
-      <div class="col-8">
-        Quote
+      <div class="col-12  quoteCol">
+        <div id="quote">
+          Quote
+        </div>
+        <div id="author">
+          Author
+        </div>
+        <!-- <h5 class="quote" id="quote">Quote</h5> -->
       </div>
 
       <div class="col-2">

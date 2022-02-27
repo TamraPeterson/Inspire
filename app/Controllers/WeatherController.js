@@ -3,22 +3,10 @@ import { weathersApi } from "../Services/AxiosService.js"
 import { weatherService } from "../Services/WeatherService.js"
 
 
-async function _getWeather() {
-  try {
-    await weatherService.getWeather()
-  } catch (error) {
-    console.error(error)
-  }
-}
+
 
 function _drawWeather() {
-  let temp = ProxyState.weather
-  let template = document.getElementById('temp').innerHTML
-  if (template = temp.fTemplate) {
-    template = temp.cTemplate
-  } else {
-    template = temp.fTemplate
-  }
+  console.log('draw weather in controller', ProxyState.weather.temp);
 }
 
 // var weatherInterval = setInterval(_getWeather, 10000)
@@ -26,11 +14,17 @@ function _drawWeather() {
 
 export class WeatherController {
   constructor() {
-    _getWeather()
+    // _drawWeather()
+    this.getWeather()
     ProxyState.on('weather', _drawWeather)
     console.log('weather controller engaged')
   }
-  toggleWeather() {
-    console.log('toggle weather triggered')
+  async getWeather() {
+    try {
+      await weatherService.getWeather()
+    } catch (error) {
+      console.error(error)
+    }
+
   }
 }

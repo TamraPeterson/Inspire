@@ -18,6 +18,8 @@ class AppState extends EventEmitter {
 
   quote = {}
 
+  /** @type {import('./Models/Weather').Weather} */
+  // @ts-ignore
   weather = {}
 
 }

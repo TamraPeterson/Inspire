@@ -6,7 +6,8 @@ import { weatherService } from "../Services/WeatherService.js"
 
 
 function _drawWeather() {
-  console.log('draw weather in controller', ProxyState.weather.temp);
+  let weather = ProxyState.weather
+  document.getElementById('temp').innerHTML = weather.fTemplate
 }
 
 // var weatherInterval = setInterval(_getWeather, 10000)
@@ -25,6 +26,14 @@ export class WeatherController {
     } catch (error) {
       console.error(error)
     }
+  }
 
+  async toggleWeather() {
+    console.log('toggle weather in controller');
+    try {
+      await weatherService.toggleWeather()
+    } catch (error) {
+      console.error(error)
+    }
   }
 }
